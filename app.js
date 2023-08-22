@@ -1,5 +1,5 @@
 const saveBtn = document.getElementById("save")
-const textInput = document.getElementById("text")
+//const textInput = document.getElementById("text")
 const fileInput = document.getElementById("file")
 const eraserBtn = document.getElementById("eraser-btn")
 const destroyBtn = document.getElementById("destroy-btn")
@@ -52,7 +52,7 @@ function onColorChange(event){
     ctx.fillStyle = event.target.value;
 }
 
-function onCololorClick(event){
+function onColorClick(event){
     const colorValue = event.target.dataset.color;
     ctx.strokeStyle = colorValue;
     ctx.fillStyle =colorValue;
@@ -126,7 +126,7 @@ canvas.addEventListener("mouseleave",cancelPainting);
 canvas.addEventListener("click",onCanvasClick);
 lineWidth.addEventListener("change",onLineWidthChange);
 color.addEventListener("change",onColorChange);
-colorOptions.forEach((color)=>color.addEventListener("click",onCololorClick));
+colorOptions.forEach((color)=>color.addEventListener("click",onColorClick));
 modeBtn.addEventListener("click",onModeClick);
 destroyBtn.addEventListener("click",onDestroyClick);
 eraserBtn.addEventListener("click",onEraserClick);
